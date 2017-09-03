@@ -4,6 +4,10 @@
 #include <debug.h>
 #include <list.h>
 #include <stdint.h>
+#include "threads/synch.h"
+
+/*My Implementation*/
+#include  <kernel/list.h>
 
 /* States in a thread's life cycle. */
 enum thread_status
@@ -23,6 +27,16 @@ typedef int tid_t;
 #define PRI_MIN 0                       /* Lowest priority. */
 #define PRI_DEFAULT 31                  /* Default priority. */
 #define PRI_MAX 63                      /* Highest priority. */
+/* A fake priority, used in priority_lock */
+#define PRIORITY_FAKE -1
+/* Lock deep level */
+#define LOCK_LEVEL 8
+/* Nice value boundary */
+#define NICE_MIN -20
+#define NICE_DEFAULT 0
+#define NICE_MAX 20
+/* recent_cpu in the begining */
+#define RECENT_CPU_BEGIN 0
 
 /* A kernel thread or user process.
 
@@ -82,21 +96,20 @@ typedef int tid_t;
    blocked state is on a semaphore wait list. */
 struct thread
   {
+    /*My Implementation*/
+    int orig_priority;  /* add a new variable to store original priority when switching it up */
+    int64_t sleep_ticks;  /* add a new variable to store ticks the thread should sleep */
+
     /* Owned by thread.c. */
     tid_t tid;                          /* Thread identifier. */
     enum thread_status status;          /* Thread state. */
     char name[16];                      /* Name (for debugging purposes). */
     uint8_t *stack;                     /* Saved stack pointer. */
-    int orig_priority;                  /*original priority*/
-    int64_t wakeup_at;                  /*wakeup time*/
     int priority;                       /* Priority. */
-    int initial_priority;                  /* Original Priority before donation (locks).  */
     struct list_elem allelem;           /* List element for all threads list. */
 
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */
-    struct list locks_acquired;         /*All locks acquired currently by the thread*/
-    struct lock *lock_seeking;               /* the lock, thread is seeking*/
 
 #ifdef USERPROG
     /* Owned by userprog/process.c. */
@@ -105,6 +118,14 @@ struct thread
 
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
+    
+     // my implementation for t02
+
+  	 struct thread *donee;
+  	  struct list donorList; 
+  	 struct list_elem donationElem;
+  	 struct semaphore sema;
+  	 struct lock *wantsLock; 
   };
 
 /* If false (default), use round-robin scheduler.
@@ -131,6 +152,9 @@ const char *thread_name (void);
 void thread_exit (void) NO_RETURN;
 void thread_yield (void);
 
+
+void recompute_thread_priority (struct thread*);
+
 /* Performs some operation on thread t, given auxiliary data AUX. */
 typedef void thread_action_func (struct thread *t, void *aux);
 void thread_foreach (thread_action_func *, void *);
@@ -138,21 +162,45 @@ void thread_foreach (thread_action_func *, void *);
 int thread_get_priority (void);
 void thread_set_priority (int);
 
+void thread_given_set_priority (struct thread *, int, bool);
+void thread_donate_priority (struct thread *, int);
+
 int thread_get_nice (void);
 void thread_set_nice (int);
 int thread_get_recent_cpu (void);
 int thread_get_load_avg (void);
-void thread_set_temporarily_up(void);
-void thread_sleep(int64_t,int);
-void thread_restore(void);
-void set_next_wakeup(void);
-void thread_check_prio(void);
-void thread_wakeup (int64_t);
-void update_ready_list(void);
+
+void donate_priority(struct thread*, struct thread *);
+
+bool
+thread_higher_priority (const struct list_elem *a_,
+                        const struct list_elem *b_,
+                         void *aux UNUSED);
+
+bool
+thread_lower_priority (const struct list_elem *a_,
+                        const struct list_elem *b_,
+void *aux UNUSED);
 
 
-void thread_add_lock (struct lock *);
-void thread_remove_lock (struct lock *);
-void thread_donate_priority (struct thread *);
-void thread_update_priority (struct thread *);
+void thread_yield_to_higher_priority (void);
+
+bool
+thread_donor_priority(const struct list_elem *a_,
+                        const struct list_elem *b_,
+void *aux UNUSED);
+
+
+/*My Implementation*/
+/*bool sleep_ticks_less (const struct list_elem *a_, const struct list_elem *b_, void *aux UNUSED);
+
+bool priority_more (const struct list_elem *a_, const struct list_elem *b_, void *aux UNUSED);*/
+
+enum intr_level thread_priority_temporarily_up (void);
+void thread_block_till (int64_t ticks);
+void thread_set_next_wakeup (void);
+void thread_check_wakeup(void);
+void thread_priority_restore (enum intr_level old_level);
+
+
 #endif /* threads/thread.h */
