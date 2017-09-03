@@ -98,23 +98,36 @@ timer_elapsed (int64_t then)
 void
 timer_sleep (int64_t ticks) 
 {
-  int64_t start = timer_ticks ();         /* The time at which timer_sleep is called. */
-  int64_t wakeup = start+ticks;           /* calculate the wake up time.  */
-  ASSERT (intr_get_level () == INTR_ON);
-  
- // set the priority temporarily MAX so that when it wakes up, it is processed first
-  thread_set_temporarily_up();
+  /* get current time ticks
+   * set ticks in thread structe
+   * put thread into sleep queue
+   * turn interupts off
+   * put to block state
+   */
 
-  // send the thread to sleeping state and adds to the sleeper list
-  thread_sleep(wakeup,ticks);
+  //int64_t start = timer_ticks ();
+
+  ASSERT (intr_get_level () == INTR_ON);
+
+  //Check for valid ticks argument (i.e. ticks > 0).
+  if (ticks <= 0)
+  {
+    return;
+  }
   
-  // when the thread wakes up,
+  /* Put the thread to sleep in timer sleep queue */
+  // enum intr_level old_level = thread_priority_temporarily_up ();
+  enum intr_level old_level = intr_disable ();
+  thread_block_till (ticks);
   
-  // it wakes up other threads having the same wakeup time recursively.
-  set_next_wakeup();
-  
-  // restore the priority of the thread to the original value
-  thread_restore();	
+  /* original code -- to be decommissioned */
+  /*while (timer_elapsed (start) < ticks) 
+    thread_yield (); */
+
+  /* Thread must quit sleep and also free its successor
+     if that thead needs to wakeup at the same time. */
+  thread_set_next_wakeup (); /*void function does nothing, returns nothing*/
+  thread_priority_restore (old_level);
 }
 
 /* Sleeps for approximately MS milliseconds.  Interrupts must be
@@ -193,6 +206,8 @@ timer_interrupt (struct intr_frame *args UNUSED)
 {
   ticks++;
   thread_tick ();
+
+  thread_check_wakeup ();
 }
 
 /* Returns true if LOOPS iterations waits for more than one timer
