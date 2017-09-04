@@ -121,11 +121,15 @@ struct thread
     
      // my implementation for t02
 
-  	 struct thread *donee;
-  	  struct list donorList; 
-  	 struct list_elem donationElem;
-  	 struct semaphore sema;
-  	 struct lock *wantsLock; 
+  	struct thread *donee;
+  	struct list donorList; 
+  	struct list_elem donationElem;
+  	struct semaphore sema;
+  	struct lock *wantsLock; 
+
+  	 /* For advanced schedule */
+    int nice;                             /* Thread nice value */
+    int recent_cpu;                       /* Thread recent CPU */
   };
 
 /* If false (default), use round-robin scheduler.
@@ -169,6 +173,15 @@ int thread_get_nice (void);
 void thread_set_nice (int);
 int thread_get_recent_cpu (void);
 int thread_get_load_avg (void);
+
+// Advanced Scheduler
+void thread_calculate_advanced_priority (void);
+void calculate_advanced_priority_for_all (void);
+void calculate_advanced_priority (struct thread *, void *aux);
+void thread_calculate_recent_cpu (void);
+void calculate_recent_cpu_for_all (void);
+void calculate_recent_cpu (struct thread *, void *aux);
+void calculate_load_avg (void);
 
 void donate_priority(struct thread*, struct thread *);
 
