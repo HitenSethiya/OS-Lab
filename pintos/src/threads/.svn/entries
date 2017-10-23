@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/threads
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -25,40 +25,6 @@ group05
 
 
 f7fb34d7-926c-44d6-8d90-371e47cc90ad
-
-interrupt.h
-file
-
-
-
-
-2017-09-11T18:55:10.000000Z
-dde8dfd78fea19ba95be87b2278e17f0
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2591
 
 cscope.out
 file
@@ -94,18 +60,17 @@ group05
 
 43736
 
-cscope.in.out
+interrupt.h
 file
 
 
 
 
-2017-09-11T18:55:08.000000Z
-875665f52da3b761510287c2accac54a
-2017-08-20T12:56:39.048930Z
-3
+2017-09-11T18:55:10.000000Z
+dde8dfd78fea19ba95be87b2278e17f0
+2017-08-15T14:14:09.336044Z
+2
 group05
-has-props
 
 
 
@@ -126,7 +91,8 @@ has-props
 
 
 
-73728
+
+2591
 
 Make.vars
 file
@@ -162,6 +128,40 @@ group05
 
 198
 
+cscope.in.out
+file
+
+
+
+
+2017-09-11T18:55:08.000000Z
+875665f52da3b761510287c2accac54a
+2017-08-20T12:56:39.048930Z
+3
+group05
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+73728
+
 thread.c
 file
 
@@ -196,9 +196,6 @@ group05
 
 30807
 
-CVS
-dir
-
 palloc.c
 file
 
@@ -232,6 +229,9 @@ group05
 
 
 5607
+
+CVS
+dir
 
 thread.h
 file
@@ -335,40 +335,6 @@ has-props
 
 64824
 
-palloc.h
-file
-
-
-
-
-2017-09-11T18:55:08.000000Z
-15a0f2905a5da2f0a3cfb5e0b0d3ef69
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-623
-
 intr-stubs.h
 file
 
@@ -403,14 +369,14 @@ group05
 
 587
 
-kernel.lds.S
+palloc.h
 file
 
 
 
 
-2017-09-11T18:55:07.000000Z
-5089085c238de29cee0bc570926c0244
+2017-09-11T18:55:08.000000Z
+15a0f2905a5da2f0a3cfb5e0b0d3ef69
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -435,7 +401,10 @@ group05
 
 
 
-632
+623
+
+tests
+dir
 
 switch.S
 file
@@ -471,8 +440,39 @@ group05
 
 1668
 
-tests
-dir
+kernel.lds.S
+file
+
+
+
+
+2017-09-11T18:55:07.000000Z
+5089085c238de29cee0bc570926c0244
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+632
 
 synch.c
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests/filesys/base
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -570,40 +570,6 @@ group05
 
 299
 
-syn-read.ck
-file
-
-
-
-
-2017-08-04T15:43:14.000000Z
-b71a4901e1ad73368a662c138c3b532b
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1331
-
 sm-random.c
 file
 
@@ -637,6 +603,40 @@ group05
 
 
 243
+
+syn-read.ck
+file
+
+
+
+
+2017-08-04T15:43:14.000000Z
+b71a4901e1ad73368a662c138c3b532b
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1331
 
 sm-seq-random.ck
 file
@@ -706,40 +706,6 @@ group05
 
 202
 
-lg-create.c
-file
-
-
-
-
-2017-08-04T15:43:12.000000Z
-222f5c41c3b87cd59fd5bd7583aa563c
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-144
-
 child-syn-read.c
 file
 
@@ -773,6 +739,40 @@ group05
 
 
 971
+
+lg-create.c
+file
+
+
+
+
+2017-08-04T15:43:12.000000Z
+222f5c41c3b87cd59fd5bd7583aa563c
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+144
 
 syn-remove.c
 file

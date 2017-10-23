@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests/threads
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -570,40 +570,6 @@ group05
 
 883
 
-alarm-single.ck
-file
-
-
-
-
-2017-08-04T15:43:23.000000Z
-c98694bf0e8980da05e680e7adb54bec
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-77
-
 alarm-priority.ck
 file
 
@@ -638,14 +604,14 @@ group05
 
 591
 
-mlfqs-nice-10.ck
+alarm-single.ck
 file
 
 
 
 
-2017-08-04T15:43:24.000000Z
-199fd88b76408c53e804d7f20d07d28b
+2017-08-04T15:43:23.000000Z
+c98694bf0e8980da05e680e7adb54bec
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -670,7 +636,7 @@ group05
 
 
 
-119
+77
 
 priority-donate-sema.ck
 file
@@ -706,6 +672,40 @@ group05
 
 468
 
+mlfqs-nice-10.ck
+file
+
+
+
+
+2017-08-04T15:43:24.000000Z
+199fd88b76408c53e804d7f20d07d28b
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+119
+
 priority-donate-lower.ck
 file
 
@@ -739,40 +739,6 @@ group05
 
 
 598
-
-priority-preempt.c
-file
-
-
-
-
-2017-08-04T15:43:25.000000Z
-b1465fc114864822478a35cf3104d52a
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1058
 
 mlfqs-fair-20.ck
 file
@@ -808,6 +774,40 @@ group05
 
 122
 
+priority-preempt.c
+file
+
+
+
+
+2017-08-04T15:43:25.000000Z
+b1465fc114864822478a35cf3104d52a
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1058
+
 alarm-negative.c
 file
 
@@ -841,108 +841,6 @@ group05
 
 
 305
-
-alarm-simultaneous.ck
-file
-
-
-
-
-2017-08-04T15:43:23.000000Z
-51044f0abc37b8121f556b72f89a0a2f
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1354
-
-priority-donate-multiple.ck
-file
-
-
-
-
-2017-08-04T15:43:25.000000Z
-136e81605c7dbb21bab98f3e85608591
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-829
-
-mlfqs-load-1.c
-file
-
-
-
-
-2017-08-04T15:43:23.000000Z
-f73e20458ec78710846010a29df86376
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1737
 
 mlfqs-load-60.ck
 file
@@ -978,6 +876,108 @@ group05
 
 861
 
+mlfqs-load-1.c
+file
+
+
+
+
+2017-08-04T15:43:23.000000Z
+f73e20458ec78710846010a29df86376
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1737
+
+priority-donate-multiple.ck
+file
+
+
+
+
+2017-08-04T15:43:25.000000Z
+136e81605c7dbb21bab98f3e85608591
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+829
+
+alarm-simultaneous.ck
+file
+
+
+
+
+2017-08-04T15:43:23.000000Z
+51044f0abc37b8121f556b72f89a0a2f
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1354
+
 alarm-wait.c
 file
 
@@ -1012,40 +1012,6 @@ group05
 
 4177
 
-priority-donate-nest.c
-file
-
-
-
-
-2017-08-04T15:43:25.000000Z
-115957db74c9d84f908b9d763964a6c4
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2430
-
 alarm-multiple.ck
 file
 
@@ -1079,6 +1045,40 @@ group05
 
 
 77
+
+priority-donate-nest.c
+file
+
+
+
+
+2017-08-04T15:43:25.000000Z
+115957db74c9d84f908b9d763964a6c4
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2430
 
 mlfqs-fair.c
 file

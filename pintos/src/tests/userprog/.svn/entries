@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests/userprog
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -740,40 +740,6 @@ group05
 
 182
 
-open-twice.c
-file
-
-
-
-
-2017-08-04T15:43:32.000000Z
-bc081db4a951025c292e8fea6b0f146c
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-493
-
 create-empty.ck
 file
 
@@ -808,14 +774,14 @@ group05
 
 245
 
-create-null.c
+open-twice.c
 file
 
 
 
 
-2017-08-04T15:43:30.000000Z
-bf1fade02415a60523c2c0343d4da16b
+2017-08-04T15:43:32.000000Z
+bc081db4a951025c292e8fea6b0f146c
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -840,7 +806,7 @@ group05
 
 
 
-239
+493
 
 exec-bad-ptr.c
 file
@@ -876,14 +842,14 @@ group05
 
 214
 
-write-normal.c
+create-null.c
 file
 
 
 
 
-2017-08-04T15:43:35.000000Z
-a1f223b32e320c8f5ea1586ed68c7282
+2017-08-04T15:43:30.000000Z
+bf1fade02415a60523c2c0343d4da16b
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -908,7 +874,7 @@ group05
 
 
 
-519
+239
 
 write-bad-fd.ck
 file
@@ -943,6 +909,40 @@ group05
 
 
 216
+
+write-normal.c
+file
+
+
+
+
+2017-08-04T15:43:35.000000Z
+a1f223b32e320c8f5ea1586ed68c7282
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+519
 
 bad-jump2.c
 file
@@ -2276,6 +2276,9 @@ group05
 
 163
 
+no-vm
+dir
+
 write-boundary.c
 file
 
@@ -2309,9 +2312,6 @@ group05
 
 
 621
-
-no-vm
-dir
 
 bad-write.c
 file
@@ -2347,40 +2347,6 @@ group05
 
 275
 
-exec-once.ck
-file
-
-
-
-
-2017-08-04T15:43:30.000000Z
-413e171eced48e4c11f9f488e8deec9e
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-192
-
 bad-read2.c
 file
 
@@ -2414,6 +2380,40 @@ group05
 
 
 328
+
+exec-once.ck
+file
+
+
+
+
+2017-08-04T15:43:30.000000Z
+413e171eced48e4c11f9f488e8deec9e
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+192
 
 write-zero.ck
 file
@@ -2517,40 +2517,6 @@ group05
 
 202
 
-write-boundary.ck
-file
-
-
-
-
-2017-08-04T15:43:35.000000Z
-d78634dc42c69a82eb0cd6a5002944db
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-200
-
 read-bad-fd.c
 file
 
@@ -2585,14 +2551,14 @@ group05
 
 427
 
-wait-simple.c
+write-boundary.ck
 file
 
 
 
 
 2017-08-04T15:43:35.000000Z
-ae2fda1d81d1169fa7106b064ac776a2
+d78634dc42c69a82eb0cd6a5002944db
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -2617,7 +2583,7 @@ group05
 
 
 
-195
+200
 
 close-normal.c
 file
@@ -2652,6 +2618,40 @@ group05
 
 
 269
+
+wait-simple.c
+file
+
+
+
+
+2017-08-04T15:43:35.000000Z
+ae2fda1d81d1169fa7106b064ac776a2
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+195
 
 Rubric.functionality
 file
@@ -2721,40 +2721,6 @@ group05
 
 260
 
-args-dbl-space.ck
-file
-
-
-
-
-2017-08-04T15:43:26.000000Z
-eae6e4b67b62aa568ee93c0a3f16d802
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-267
-
 create-empty.c
 file
 
@@ -2788,6 +2754,40 @@ group05
 
 
 184
+
+args-dbl-space.ck
+file
+
+
+
+
+2017-08-04T15:43:26.000000Z
+eae6e4b67b62aa568ee93c0a3f16d802
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+267
 
 halt.ck
 file
@@ -2891,40 +2891,6 @@ group05
 
 145
 
-close-normal.ck
-file
-
-
-
-
-2017-08-04T15:43:28.000000Z
-2389b1477be13ab5595cebc1b707564b
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-226
-
 wait-simple.ck
 file
 
@@ -2958,6 +2924,40 @@ group05
 
 
 230
+
+close-normal.ck
+file
+
+
+
+
+2017-08-04T15:43:28.000000Z
+2389b1477be13ab5595cebc1b707564b
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+226
 
 read-boundary.ck
 file
@@ -3027,40 +3027,6 @@ group05
 
 254
 
-Rubric.robustness
-file
-
-
-
-
-2017-08-04T15:43:26.000000Z
-35b736accfc2c674c0e10a1d13d99576
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-857
-
 multi-recurse.ck
 file
 
@@ -3094,6 +3060,40 @@ group05
 
 
 1824
+
+Rubric.robustness
+file
+
+
+
+
+2017-08-04T15:43:26.000000Z
+35b736accfc2c674c0e10a1d13d99576
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+857
 
 read-normal.ck
 file
@@ -3707,14 +3707,14 @@ group05
 
 191
 
-close-twice.ck
+child-rox.c
 file
 
 
 
 
-2017-08-04T15:43:29.000000Z
-343b4d6e4c2a038d7a8b863956a32450
+2017-08-04T15:43:27.000000Z
+9202935fe7cb46b7ce3cfa8f55b8ded5
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -3739,7 +3739,7 @@ group05
 
 
 
-419
+1187
 
 rox-child.c
 file
@@ -3775,14 +3775,14 @@ group05
 
 165
 
-child-rox.c
+close-twice.ck
 file
 
 
 
 
-2017-08-04T15:43:27.000000Z
-9202935fe7cb46b7ce3cfa8f55b8ded5
+2017-08-04T15:43:29.000000Z
+343b4d6e4c2a038d7a8b863956a32450
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -3807,41 +3807,7 @@ group05
 
 
 
-1187
-
-read-stdout.c
-file
-
-
-
-
-2017-08-04T15:43:33.000000Z
-b21acd81a004c45ce5cb9ccf221d3293
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-247
+419
 
 write-normal.ck
 file
@@ -3876,6 +3842,40 @@ group05
 
 
 223
+
+read-stdout.c
+file
+
+
+
+
+2017-08-04T15:43:33.000000Z
+b21acd81a004c45ce5cb9ccf221d3293
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+247
 
 open-boundary.ck
 file
@@ -4149,40 +4149,6 @@ group05
 
 211
 
-sample.inc
-file
-
-
-
-
-2017-08-04T15:43:34.000000Z
-49480b16bf927fc53e9ab0f2dd418b9f
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-287
-
 open-empty.ck
 file
 
@@ -4216,6 +4182,40 @@ group05
 
 
 153
+
+sample.inc
+file
+
+
+
+
+2017-08-04T15:43:34.000000Z
+49480b16bf927fc53e9ab0f2dd418b9f
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+287
 
 wait-bad-pid.ck
 file

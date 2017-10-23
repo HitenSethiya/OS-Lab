@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <malloc.h>
 #include "userprog/gdt.h"
 #include "userprog/pagedir.h"
 #include "userprog/tss.h"
@@ -22,18 +23,6 @@
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
 
- void test_stack(int *t)
- { 
-//  int i;
-// int argc = t[1];
-// char ** argv;
-// argv = (char **) t[2];
-// printf("ARGC:%d ARGV:%x\n", argc, (unsigned int)argv);
-// for (i = 0; i < argc; i++)
-// printf("Argv[%d] = %x pointing at %s\n",
-// i, (unsigned int)argv[i], argv[i]);
-}
-
 
 /* Starts a new thread running a user program loaded from
    FILENAME.  The new thread may be scheduled (and may even exit)
@@ -44,7 +33,6 @@ process_execute (const char *file_name)
 {
   char *fn_copy;
   tid_t tid;
-  
   /* Make a copy of FILE_NAME.
      Otherwise there's a race between the caller and load(). */
   fn_copy = palloc_get_page (0);
@@ -72,32 +60,18 @@ start_process (void *file_name_)
   char *file_name = file_name_;
   struct intr_frame if_;
   bool success;
-
-  // Get actual file name (first parsed token)
-  char *save_ptr;
-  file_name = strtok_r(file_name, " ", &save_ptr);
-
-
   /* Initialize interrupt frame and load executable. */
   memset (&if_, 0, sizeof if_);
   if_.gs = if_.fs = if_.es = if_.ds = if_.ss = SEL_UDSEG;
   if_.cs = SEL_UCSEG;
   if_.eflags = FLAG_IF | FLAG_MBS;
   success = load (file_name, &if_.eip, &if_.esp);
-  
-  if (success)
-    {
-      thread_current()->cp->load = LOAD_SUCCESS;
-    }
-  else
-    {
-      thread_current()->cp->load = LOAD_FAIL;
-    }
 
   /* If load failed, quit. */
   palloc_free_page (file_name);
   if (!success) 
     thread_exit ();
+   
 
   /* Start the user process by simulating a return from an
      interrupt, implemented by intr_exit (in
@@ -120,6 +94,7 @@ start_process (void *file_name_)
 int
 process_wait (tid_t child_tid UNUSED) 
 {
+  
   struct child_process* cp = get_child_process(child_tid);
   if (!cp)
     {
@@ -143,38 +118,39 @@ process_wait (tid_t child_tid UNUSED)
 void
 process_exit (void)
 {
-  struct thread *cur = thread_current ();
-  uint32_t *pd;
+	struct thread *cur = thread_current ();
+	uint32_t *pd;
 
-  // Close all files opened by process
-  process_close_file(CLOSE_ALL);
+	// Close all files opened by process
+	process_close_file(CLOSE_ALL);
 
-  // Free child list
-  remove_child_processes();
+	// Free child list
+	remove_child_processes();
 
-  // Set exit value to true in case killed by the kernel
-  if (thread_alive(cur->parent))
-    {
-      cur->cp->exit = true;
-    }
+	// Set exit value to true in case killed by the kernel
+	if (thread_alive(cur->parent))
+		{
+			cur->cp->exit = true;
+		}
 
-  /* Destroy the current process's page directory and switch back
-     to the kernel-only page directory. */
-  pd = cur->pagedir;
-  if (pd != NULL) 
-    {
-      /* Correct ordering here is crucial.  We must set
-         cur->pagedir to NULL before switching page directories,
-         so that a timer interrupt can't switch back to the
-         process page directory.  We must activate the base page
-         directory before destroying the process's page
-         directory, or our active page directory will be one
-         that's been freed (and cleared). */
-      cur->pagedir = NULL;
-      pagedir_activate (NULL);
-      pagedir_destroy (pd);
-    }
+	/* Destroy the current process's page directory and switch back
+		 to the kernel-only page directory. */
+	pd = cur->pagedir;
+	if (pd != NULL) 
+		{
+			/* Correct ordering here is crucial.  We must set
+				 cur->pagedir to NULL before switching page directories,
+				 so that a timer interrupt can't switch back to the
+				 process page directory.  We must activate the base page
+				 directory before destroying the process's page
+				 directory, or our active page directory will be one
+				 that's been freed (and cleared). */
+			cur->pagedir = NULL;
+			pagedir_activate (NULL);
+			pagedir_destroy (pd);
+		}
 }
+
 /* Sets up the CPU for running user code in the current
    thread.
    This function is called on every context switch. */
@@ -280,7 +256,6 @@ load (const char *file_name, void (**eip) (void), void **esp)
   if (t->pagedir == NULL) 
     goto done;
   process_activate ();
-  
   /* Open executable file. */
   char * fn_cp = malloc (strlen(file_name)+1);
   strlcpy(fn_cp, file_name, strlen(file_name)+1);
@@ -372,8 +347,6 @@ load (const char *file_name, void (**eip) (void), void **esp)
   /* Set up stack. */
   if (!setup_stack (esp,file_name))
     goto done;
-
-  test_stack(*esp);
 
   /* Start address. */
   *eip = (void (*) (void)) ehdr.e_entry;

@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/filesys
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -196,40 +196,6 @@ group05
 
 5843
 
-Make.vars
-file
-
-
-
-
-2017-08-04T15:43:01.000000Z
-5fd4449cdb2a2a4c623fc06910668bde
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-440
-
 fsutil.c
 file
 
@@ -263,6 +229,40 @@ group05
 
 
 6147
+
+Make.vars
+file
+
+
+
+
+2017-08-04T15:43:01.000000Z
+5fd4449cdb2a2a4c623fc06910668bde
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+440
 
 directory.h
 file
@@ -335,9 +335,6 @@ group05
 
 242
 
-build
-dir
-
 filesys.c
 file
 
@@ -371,6 +368,9 @@ group05
 
 
 2507
+
+build
+dir
 
 file.c
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests/filesys/extended
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -128,40 +128,6 @@ group05
 
 96
 
-dir-under-file-persistence.ck
-file
-
-
-
-
-2017-08-04T15:43:19.000000Z
-88cdf6e115dc47c41ea59d5c4969c66a
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-98
-
 dir-empty-name.ck
 file
 
@@ -195,6 +161,40 @@ group05
 
 
 211
+
+dir-under-file-persistence.ck
+file
+
+
+
+
+2017-08-04T15:43:19.000000Z
+88cdf6e115dc47c41ea59d5c4969c66a
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98
 
 mk-tree.c
 file
@@ -298,40 +298,6 @@ group05
 
 311
 
-mk-tree.h
-file
-
-
-
-
-2017-08-04T15:43:21.000000Z
-36c65333c44cc8ae1a9f3fe7469af6ef
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-179
-
 grow-tell-persistence.ck
 file
 
@@ -366,14 +332,14 @@ group05
 
 137
 
-grow-root-lg.ck
+mk-tree.h
 file
 
 
 
 
-2017-08-04T15:43:20.000000Z
-9ba4057985c1262f472a33b0f40fa203
+2017-08-04T15:43:21.000000Z
+36c65333c44cc8ae1a9f3fe7469af6ef
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -398,7 +364,41 @@ group05
 
 
 
-2470
+179
+
+dir-open-persistence.ck
+file
+
+
+
+
+2017-08-04T15:43:15.000000Z
+d91653f754ec037497eab44a1a9a12f7
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98
 
 dir-vine-persistence.ck
 file
@@ -434,14 +434,14 @@ group05
 
 1170
 
-dir-open-persistence.ck
+grow-root-lg.ck
 file
 
 
 
 
-2017-08-04T15:43:15.000000Z
-d91653f754ec037497eab44a1a9a12f7
+2017-08-04T15:43:20.000000Z
+9ba4057985c1262f472a33b0f40fa203
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -466,7 +466,7 @@ group05
 
 
 
-98
+2470
 
 dir-rm-root.c
 file
@@ -1046,40 +1046,6 @@ group05
 
 262
 
-dir-rmdir.ck
-file
-
-
-
-
-2017-08-04T15:43:19.000000Z
-255918b559092d63e33d032448687b02
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-241
-
 grow-seq-lg.c
 file
 
@@ -1113,6 +1079,40 @@ group05
 
 
 147
+
+dir-rmdir.ck
+file
+
+
+
+
+2017-08-04T15:43:19.000000Z
+255918b559092d63e33d032448687b02
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+241
 
 grow-sparse-persistence.ck
 file
@@ -1216,40 +1216,6 @@ group05
 
 132
 
-grow-root-sm.c
-file
-
-
-
-
-2017-08-04T15:43:20.000000Z
-f60b2e1af3568d467886c46a2383d6b5
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-114
-
 grow-create-persistence.ck
 file
 
@@ -1284,14 +1250,14 @@ group05
 
 102
 
-dir-vine.c
+grow-root-sm.c
 file
 
 
 
 
-2017-08-04T15:43:19.000000Z
-90a8d1913ab6444cda4188c25d23f4af
+2017-08-04T15:43:20.000000Z
+f60b2e1af3568d467886c46a2383d6b5
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -1316,7 +1282,41 @@ group05
 
 
 
-2774
+114
+
+dir-mk-tree-persistence.ck
+file
+
+
+
+
+2017-08-04T15:43:15.000000Z
+bc7b92dea7279bc15127f012830193e0
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+242
 
 dir-open.c
 file
@@ -1352,14 +1352,14 @@ group05
 
 451
 
-dir-mk-tree-persistence.ck
+dir-vine.c
 file
 
 
 
 
-2017-08-04T15:43:15.000000Z
-bc7b92dea7279bc15127f012830193e0
+2017-08-04T15:43:19.000000Z
+90a8d1913ab6444cda4188c25d23f4af
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -1384,7 +1384,7 @@ group05
 
 
 
-242
+2774
 
 grow-seq-sm-persistence.ck
 file
@@ -1590,40 +1590,6 @@ group05
 
 626
 
-Make.tests
-file
-
-
-
-
-2017-08-04T15:43:15.000000Z
-32566ebffb36deb7573f28ef4f56f9e6
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2359
-
 dir-mkdir.ck
 file
 
@@ -1657,6 +1623,40 @@ group05
 
 
 245
+
+Make.tests
+file
+
+
+
+
+2017-08-04T15:43:15.000000Z
+32566ebffb36deb7573f28ef4f56f9e6
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2359
 
 dir-rm-tree.ck
 file
@@ -1896,40 +1896,6 @@ group05
 
 455
 
-grow-seq-lg.ck
-file
-
-
-
-
-2017-08-04T15:43:20.000000Z
-2f8a99a8505748ab957c4f45f2a5c8cf
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-414
-
 dir-mkdir-persistence.ck
 file
 
@@ -1963,6 +1929,40 @@ group05
 
 
 113
+
+grow-seq-lg.ck
+file
+
+
+
+
+2017-08-04T15:43:20.000000Z
+2f8a99a8505748ab957c4f45f2a5c8cf
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+414
 
 child-syn-rw.c
 file
@@ -1998,40 +1998,6 @@ group05
 
 1497
 
-grow-seq-sm.c
-file
-
-
-
-
-2017-08-04T15:43:20.000000Z
-2121485fe7c2ef6e6b15e99a4867cba3
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-145
-
 grow-dir.inc
 file
 
@@ -2065,6 +2031,40 @@ group05
 
 
 769
+
+grow-seq-sm.c
+file
+
+
+
+
+2017-08-04T15:43:20.000000Z
+2121485fe7c2ef6e6b15e99a4867cba3
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+145
 
 dir-mkdir.c
 file

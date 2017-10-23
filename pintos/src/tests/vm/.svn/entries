@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests/vm
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -60,40 +60,6 @@ group05
 
 164
 
-mmap-exit.c
-file
-
-
-
-
-2017-08-04T15:43:38.000000Z
-78229284d1bad7cb8c324b2f3c162a79
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-526
-
 pt-grow-stk-sc.c
 file
 
@@ -127,6 +93,40 @@ group05
 
 
 917
+
+mmap-exit.c
+file
+
+
+
+
+2017-08-04T15:43:38.000000Z
+78229284d1bad7cb8c324b2f3c162a79
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+526
 
 mmap-read.c
 file
@@ -298,40 +298,6 @@ group05
 
 244
 
-sample.txt
-file
-
-
-
-
-2017-08-04T15:43:42.000000Z
-b4465a89b8fd21eadc116eca1b6efb82
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-794
-
 mmap-read.ck
 file
 
@@ -365,6 +331,40 @@ group05
 
 
 215
+
+sample.txt
+file
+
+
+
+
+2017-08-04T15:43:42.000000Z
+b4465a89b8fd21eadc116eca1b6efb82
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+794
 
 pt-write-code-2.c
 file
@@ -1284,40 +1284,6 @@ group05
 
 706
 
-pt-bad-addr.ck
-file
-
-
-
-
-2017-08-04T15:43:41.000000Z
-44bafda4fb494526c4f95eb193a3b7fb
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-127
-
 Grading
 file
 
@@ -1351,6 +1317,40 @@ group05
 
 
 423
+
+pt-bad-addr.ck
+file
+
+
+
+
+2017-08-04T15:43:41.000000Z
+44bafda4fb494526c4f95eb193a3b7fb
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+127
 
 mmap-misalign.c
 file
@@ -1522,40 +1522,6 @@ group05
 
 200
 
-page-shuffle.c
-file
-
-
-
-
-2017-08-04T15:43:41.000000Z
-5dfa38bd980b98773b067845f804c53e
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-600
-
 mmap-misalign.ck
 file
 
@@ -1589,6 +1555,40 @@ group05
 
 
 247
+
+page-shuffle.c
+file
+
+
+
+
+2017-08-04T15:43:41.000000Z
+5dfa38bd980b98773b067845f804c53e
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+600
 
 mmap-zero.c
 file
@@ -1624,14 +1624,14 @@ group05
 
 763
 
-mmap-unmap.c
+mmap-close.ck
 file
 
 
 
 
-2017-08-04T15:43:40.000000Z
-9af6680b42ef499d58b7519d9565aed0
+2017-08-04T15:43:38.000000Z
+1c36e86c0ad45ec9b675328b0f15f0d3
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -1656,7 +1656,7 @@ group05
 
 
 
-517
+219
 
 page-merge-stk.c
 file
@@ -1692,14 +1692,14 @@ group05
 
 127
 
-mmap-close.ck
+mmap-unmap.c
 file
 
 
 
 
-2017-08-04T15:43:38.000000Z
-1c36e86c0ad45ec9b675328b0f15f0d3
+2017-08-04T15:43:40.000000Z
+9af6680b42ef499d58b7519d9565aed0
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -1724,41 +1724,7 @@ group05
 
 
 
-219
-
-mmap-exit.ck
-file
-
-
-
-
-2017-08-04T15:43:38.000000Z
-daf6f2ea27d1f7c5c38e21677cc31c84
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-420
+517
 
 pt-grow-stk-sc.ck
 file
@@ -1794,6 +1760,40 @@ group05
 
 403
 
+mmap-exit.ck
+file
+
+
+
+
+2017-08-04T15:43:38.000000Z
+daf6f2ea27d1f7c5c38e21677cc31c84
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+420
+
 pt-grow-stack.ck
 file
 
@@ -1828,40 +1828,6 @@ group05
 
 197
 
-pt-write-code2.ck
-file
-
-
-
-
-2017-08-04T15:43:42.000000Z
-6ec05c3ea54a66748456f78546a35480
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-180
-
 page-merge-mm.c
 file
 
@@ -1895,6 +1861,40 @@ group05
 
 
 130
+
+pt-write-code2.ck
+file
+
+
+
+
+2017-08-04T15:43:42.000000Z
+6ec05c3ea54a66748456f78546a35480
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+180
 
 mmap-zero.ck
 file

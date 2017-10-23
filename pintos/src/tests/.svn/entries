@@ -1,7 +1,7 @@
 10
 
 dir
-8
+9
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/tests
 file:///home/CS342/2017/STUD/group05/osproj
 
@@ -137,9 +137,6 @@ group05
 threads
 dir
 
-CVS
-dir
-
 random.pm
 file
 
@@ -173,6 +170,9 @@ group05
 
 
 386
+
+CVS
+dir
 
 lib.h
 file
@@ -208,40 +208,6 @@ group05
 
 1767
 
-cksum.pm
-file
-
-
-
-
-2017-08-04T15:43:09.000000Z
-3c4a0ed3011c420c551cf6c2dc3697e1
-2017-08-15T14:14:09.336044Z
-2
-group05
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3910
-
 make-grade
 file
 
@@ -275,6 +241,40 @@ has-props
 
 
 4096
+
+cksum.pm
+file
+
+
+
+
+2017-08-04T15:43:09.000000Z
+3c4a0ed3011c420c551cf6c2dc3697e1
+2017-08-15T14:14:09.336044Z
+2
+group05
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3910
 
 cksum.c
 file
