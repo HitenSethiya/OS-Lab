@@ -17,19 +17,21 @@
 #include "threads/palloc.h"
 #include "threads/thread.h"
 #include "threads/vaddr.h"
+#include "userprog/syscall.h"
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
 
  void test_stack(int *t)
-{ int i;
-int argc = t[1];
-char ** argv;
-argv = (char **) t[2];
-printf("ARGC:%d ARGV:%x\n", argc, (unsigned int)argv);
-for (i = 0; i < argc; i++)
-printf("Argv[%d] = %x pointing at %s\n",
-i, (unsigned int)argv[i], argv[i]);
+ { 
+//  int i;
+// int argc = t[1];
+// char ** argv;
+// argv = (char **) t[2];
+// printf("ARGC:%d ARGV:%x\n", argc, (unsigned int)argv);
+// for (i = 0; i < argc; i++)
+// printf("Argv[%d] = %x pointing at %s\n",
+// i, (unsigned int)argv[i], argv[i]);
 }
 
 
@@ -71,12 +73,26 @@ start_process (void *file_name_)
   struct intr_frame if_;
   bool success;
 
+  // Get actual file name (first parsed token)
+  char *save_ptr;
+  file_name = strtok_r(file_name, " ", &save_ptr);
+
+
   /* Initialize interrupt frame and load executable. */
   memset (&if_, 0, sizeof if_);
   if_.gs = if_.fs = if_.es = if_.ds = if_.ss = SEL_UDSEG;
   if_.cs = SEL_UCSEG;
   if_.eflags = FLAG_IF | FLAG_MBS;
   success = load (file_name, &if_.eip, &if_.esp);
+  
+  if (success)
+    {
+      thread_current()->cp->load = LOAD_SUCCESS;
+    }
+  else
+    {
+      thread_current()->cp->load = LOAD_FAIL;
+    }
 
   /* If load failed, quit. */
   palloc_free_page (file_name);
@@ -104,8 +120,23 @@ start_process (void *file_name_)
 int
 process_wait (tid_t child_tid UNUSED) 
 {
-  while(1)  ;
-  return -1;
+  struct child_process* cp = get_child_process(child_tid);
+  if (!cp)
+    {
+      return ERROR;
+    }
+  if (cp->wait)
+    {
+      return ERROR;
+    }
+  cp->wait = true;
+  while (!cp->exit)
+    {
+      barrier();
+    }
+  int status = cp->status;
+  remove_child_process(cp);
+  return status;
 }
 
 /* Free the current process's resources. */
@@ -114,6 +145,18 @@ process_exit (void)
 {
   struct thread *cur = thread_current ();
   uint32_t *pd;
+
+  // Close all files opened by process
+  process_close_file(CLOSE_ALL);
+
+  // Free child list
+  remove_child_processes();
+
+  // Set exit value to true in case killed by the kernel
+  if (thread_alive(cur->parent))
+    {
+      cur->cp->exit = true;
+    }
 
   /* Destroy the current process's page directory and switch back
      to the kernel-only page directory. */

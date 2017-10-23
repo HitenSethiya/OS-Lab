@@ -1,14 +1,14 @@
 10
 
 dir
-2
+8
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src
 file:///home/CS342/2017/STUD/group05/osproj
 
 
 
-2017-08-15T14:14:09.336044Z
-2
+2017-10-03T03:20:40.112827Z
+8
 group05
 
 
@@ -60,16 +60,22 @@ group05
 
 1664
 
-Makefile.userprog
+vm
+dir
+
+devices
+dir
+
+cscope.out
 file
 
 
 
 
-2017-08-04T15:42:57.000000Z
-1c64e95907c405bf53ee0e6b0a5af6cf
-2017-08-15T14:14:09.336044Z
-2
+2017-08-16T18:32:03.000000Z
+cb4157330f7931f2d81fcd2be2ba48fc
+2017-08-20T12:56:39.048930Z
+3
 group05
 
 
@@ -92,7 +98,7 @@ group05
 
 
 
-1551
+354373
 
 LICENSE
 file
@@ -128,14 +134,14 @@ group05
 
 4621
 
-cscope.out
+Makefile.userprog
 file
 
 
 
 
-2017-08-07T16:47:08.000000Z
-3a66a98481f57fdf2d011a6627ff6f93
+2017-08-04T15:42:57.000000Z
+1c64e95907c405bf53ee0e6b0a5af6cf
 2017-08-15T14:14:09.336044Z
 2
 group05
@@ -160,13 +166,7 @@ group05
 
 
 
-354246
-
-devices
-dir
-
-vm
-dir
+1551
 
 cscope.in.out
 file
@@ -174,10 +174,10 @@ file
 
 
 
-2017-08-07T16:47:08.000000Z
-d88d049bf9b305547269f435ccb41052
-2017-08-15T14:14:09.336044Z
-2
+2017-08-16T18:32:03.000000Z
+42f54e1f8fdc33577da4e82c2e158877
+2017-08-20T12:56:39.048930Z
+3
 group05
 has-props
 
@@ -205,10 +205,10 @@ has-props
 threads
 dir
 
-CVS
+misc
 dir
 
-misc
+CVS
 dir
 
 Makefile.kernel
@@ -254,10 +254,10 @@ file
 
 
 
-2017-08-07T16:47:08.000000Z
-61f7afcad6589473355c92b2d052ea74
-2017-08-15T14:14:09.336044Z
-2
+2017-08-16T18:32:03.000000Z
+fdad20dc7357ccd41530ba1a8e4dd043
+2017-08-20T12:56:39.048930Z
+3
 group05
 has-props
 
@@ -280,7 +280,7 @@ has-props
 
 
 
-498912
+499056
 
 utils
 dir

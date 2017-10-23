@@ -11,6 +11,8 @@
 #include "threads/switch.h"
 #include "threads/synch.h"
 #include "threads/vaddr.h"
+#include "threads/malloc.h"
+#include "userprog/syscall.h"
 
 /* In order to use timer_ticks() */
 #include "devices/timer.h"
@@ -52,6 +54,9 @@ static bool priority_more (const struct list_elem *a_, const struct list_elem *b
    Used to detect stack overflow.  See the big comment at the top
    of thread.h for details. */
 #define THREAD_MAGIC 0xcd6abf4b
+
+#define MIN_FD 2
+#define NO_PARENT -1
 
 /*   List of processes in THREAD_BLOCK state, that is, processes
    that are in sleep status. */
@@ -312,6 +317,9 @@ thread_create (const char *name, int priority,
   sf->ebp = 0;
 
   intr_set_level (old_level);
+  t->parent = thread_tid();
+  struct child_process *cp = add_child_process(t->tid);
+  t->cp = cp;
   /* Add to run queue. */
   thread_unblock (t);
   if (thread_mlfqs)
@@ -832,6 +840,12 @@ init_thread (struct thread *t, const char *name, int priority)
   }
   t->magic = THREAD_MAGIC;
   list_push_back (&all_list, &t->allelem);
+  list_init(&t->file_list);
+  t->fd = MIN_FD;
+
+  list_init(&t->child_list);
+  t->cp = NULL;
+  t->parent = NO_PARENT;
 }
 /* Allocates a SIZE-byte frame at the top of thread T's stack and
    returns a pointer to the frame's base. */
@@ -946,6 +960,22 @@ allocate_tid (void)
 /* Offset of `stack' member within `struct thread'.
    Used by switch.S, which can't figure it out on its own. */
 uint32_t thread_stack_ofs = offsetof (struct thread, stack);
+
+bool thread_alive (int pid)
+{
+  struct list_elem *e;
+
+  for (e = list_begin (&all_list); e != list_end (&all_list);
+       e = list_next (e))
+    {
+      struct thread *t = list_entry (e, struct thread, allelem);
+      if (t->tid == pid)
+ {
+   return true;
+ }
+    }
+  return false;
+}
 
 
 /*My Implementation*/

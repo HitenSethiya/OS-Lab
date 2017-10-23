@@ -130,6 +130,15 @@ struct thread
   	 /* For advanced schedule */
     int nice;                             /* Thread nice value */
     int recent_cpu;                       /* Thread recent CPU */
+    // Needed for file system sys calls
+    struct list file_list;
+    int fd;
+
+    // Needed for wait / exec sys calls
+    struct list child_list;
+    tid_t parent;
+    // Points to child_process struct in parent's child list
+    struct child_process* cp;
   };
 
 /* If false (default), use round-robin scheduler.
@@ -215,5 +224,6 @@ void thread_set_next_wakeup (void);
 void thread_check_wakeup(void);
 void thread_priority_restore (enum intr_level old_level);
 
+bool thread_alive (int pid);
 
 #endif /* threads/thread.h */

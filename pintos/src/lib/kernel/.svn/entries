@@ -1,14 +1,14 @@
 10
 
 dir
-2
+8
 file:///home/CS342/2017/STUD/group05/osproj/os_commits/src/lib/kernel
 file:///home/CS342/2017/STUD/group05/osproj
 
 
 
-2017-08-15T14:14:09.336044Z
-2
+2017-08-20T12:56:39.048930Z
+3
 group05
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2017-08-04T15:43:06.000000Z
-e0d517b30e2e903dcca087527dbc0031
-2017-08-15T14:14:09.336044Z
-2
+2017-08-16T18:42:43.000000Z
+cf6fb6f375cf25aab739d81f811a5c92
+2017-08-20T12:56:39.048930Z
+3
 group05
 
 
@@ -58,7 +58,7 @@ group05
 
 
 
-5863
+6015
 
 bitmap.h
 file
