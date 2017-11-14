@@ -1,0 +1,142 @@
+Copying tests/vm/page-merge-stk to scratch partition...
+Copying tests/vm/child-qsort to scratch partition...
+Writing command line to /tmp/POBTe9iwxZ.dsk...
+qemu -hda /tmp/POBTe9iwxZ.dsk -hdb /tmp/VhyjMyjEBH.dsk -hdc /tmp/GXq2XVXXn2.dsk -hdd /tmp/QQi0sv16r8.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Putting 'page-merge-stk' into the file system...
+Putting 'child-qsort' into the file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Kernel command line: -q -f extract run page-merge-stk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Erasing ustar archive...
+Executing 'page-merge-stk':
+load: page-merge-stk: open failed
+Kernel PANIC at ../../threads/thread.c:374 in thread_current(): assertion `is_thread (t)' failed.
+Call stack: 0xc002f024Kernel PANIC recursion at ../../threads/thread.c:374 in thread_current().
+Simulation terminated due to kernel panic.
